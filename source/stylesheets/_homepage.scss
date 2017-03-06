@@ -1,0 +1,299 @@
+$media--small:       'only screen and (min-width : 320px)';
+$media--medium:      'only screen and (min-width : 768px)';
+$media--large:       'only screen and (min-width : 1224px)';
+$media--xlarge:      'only screen and (min-width : 1824px)';
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 924px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header {
+  padding-top: 20px;
+  display:block;
+}
+
+.logo {
+  @include size(70px 64px);
+  background-image: image-url('logo.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  a {
+    @include size(70px 64px);
+    display: block;
+  }
+}
+
+.nav-list {
+  display: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  float: right;
+
+  @media #{$media--medium} {
+    display: block;
+  }
+}
+
+.nav-list.is-open {
+  display: block;
+  background-color: #6B839D;
+  height: calc(100vh - 55px);
+  left: 0;
+  margin-top: 55px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+li {
+  @media only screen and (min-width: 768px) {
+    position:relative;
+    display:inline-block;
+    padding:0 .5rem;
+  }
+  /*@media #{$media--small} {
+    display: block;
+    text-align: center;
+  }*/
+}
+
+.nav-menu {
+  @media #{$media--medium} {
+    display: none;
+  }
+}
+
+.nav-link {
+  color: #444747;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  &:active {
+    border-bottom: 2px solid #6B839D;
+    padding-bottom: 5px;
+    color: #6B839D;
+  }
+
+  &:hover {
+    border-bottom: 2px solid #6B839D;
+    padding-bottom: 5px;
+    color: #6B839D;
+  }
+}
+
+.nav-icon {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hero {
+  padding-top: 20px;
+}
+
+.hero-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 924px;
+}
+
+.hero-image {
+  height: 30rem;
+  background-size: cover;
+}
+
+.hero-image--home {
+  background-image: url('../images/hero_01.jpg');
+  background-position: 75%;
+
+  @media #{$media--medium} {
+    background-position: 50%;
+  }
+
+  @media #{$media--large} {
+    background-position: 0;
+  }
+}
+
+.Hero-text {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: white;
+  font-family: 'League Script', cursive;
+  text-align: center;
+  font-size: 28px;
+}
+
+h2 {
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'League Script', cursive;
+  color: #6B839D;
+  font-size: 28px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 28px;
+  color: #6B839D;
+  font-family: 'League Script', cursive;
+ }
+
+ h5 {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   color: #444747;
+ }
+
+.center-copy{
+  max-width:50%;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+p {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 14px;
+  font-weight:200;
+  line-height:24px;
+  color: #444747;
+}
+
+.emblem{
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.emblem.contact{
+  margin-top:50px;
+}
+
+.emblem img {
+  width: 20px;
+}
+
+.headline{
+  max-width: 100%;
+  margin: 0 auto;
+  left: 50%;
+}
+
+.flex-wrapper{
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.flex-wrapper.gallery-wrapper{
+  margin-top:50px;
+}
+
+.flex-wrapper.events-wrapper{
+  margin-bottom:25px;
+}
+
+.flex-wrapper.contact{
+  margin:45px 55px;
+}
+
+.flex-column img:first-child{
+  margin-right: 30px;
+}
+
+.flex-column p:first-child{
+  margin-top: 0;
+}
+
+.flex-column h4:first-child{
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.flex-column{
+  margin-bottom: 25px;
+}
+
+.button {
+  background: transparent;
+  border: 2px solid #6B839D;
+  font-size: 12px;
+  color: #6B839D;
+  font-weight: 300;
+  letter-spacing: 4px;
+  padding: 1rem 1rem;
+  transition: all 0.5s;
+
+  a {
+    color: #6B839D;
+    text-decoration: none;
+  }
+}
+
+.button.registry{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.button:hover {
+  background: #6B839D;
+
+  a {
+    color: white;
+  }
+}
+
+.zola-logo{
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.zola-logo img {
+  width: 200px;
+}
+
+.qanda {
+  margin-bottom: 40px;
+}
