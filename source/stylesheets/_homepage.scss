@@ -24,11 +24,16 @@ $media--xlarge:      'only screen and (min-width : 1824px)';
 }
 
 .logo {
-  @include size(70px 64px);
+  @include size(35px 32px);
   background-image: image-url('logo.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: inline-block;
+
+  @media #{$media--medium} {
+    @include size(70px 64px);
+  }
+
   a {
     @include size(70px 64px);
     display: block;
@@ -68,10 +73,6 @@ li {
     display:inline-block;
     padding:0 .5rem;
   }
-  /*@media #{$media--small} {
-    display: block;
-    text-align: center;
-  }*/
 }
 
 .nav-menu {
