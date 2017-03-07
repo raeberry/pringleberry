@@ -2,7 +2,8 @@
 
 $(document).ready(function() {
   $('.nav-menu').on('click', function(e) {
-    $('.nav-list').toggleClass('is-open');
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
     $('html').toggleClass('no-scroll');
+    $('.nav-list').toggleClass('is-open');
   });
 });
