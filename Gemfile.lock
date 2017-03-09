@@ -90,6 +90,8 @@ GEM
     parallel (1.10.0)
     public_suffix (2.0.5)
     rack (2.0.1)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.9.8)
@@ -112,6 +114,7 @@ DEPENDENCIES
   bourbon
   middleman (>= 4.0.0)
   middleman-livereload
+  rack-contrib
   tzinfo-data
   wdm (~> 0.1.0)
 

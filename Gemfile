@@ -13,3 +13,4 @@ gem 'bourbon'
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
+gem 'rack-contrib'
