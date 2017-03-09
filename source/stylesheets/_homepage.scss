@@ -55,9 +55,9 @@ $media--xlarge:      'only screen and (min-width : 1824px)';
 .nav-list.is-open {
   display: block;
   background-color: #6B839D;
-  height: calc(100vh - 55px);
+  height: calc(100vh - 51px);
   left: 0;
-  margin-top: 55px;
+  margin-top: 51px;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -82,23 +82,41 @@ li {
 }
 
 .nav-link {
-  color: #444747;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  text-decoration: none;
-  letter-spacing: 1px;
+  border-bottom: 2px solid transparent;
+
+  @media #{$media--small} {
+    color: #FFFFFF;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+
+  @media #{$media--medium} {
+    color: #444747;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
 
   &:active {
-    border-bottom: 2px solid #6B839D;
-    padding-bottom: 5px;
-    color: #6B839D;
+    @media #{$media--medium} {
+      border-bottom: 2px solid #6B839D;
+      color: #6B839D;
+    }
   }
 
   &:hover {
-    border-bottom: 2px solid #6B839D;
-    padding-bottom: 5px;
-    color: #6B839D;
+    @media #{$media--medium} {
+      border-bottom: 2px solid #6B839D;
+      color: #6B839D;
+    }
   }
 }
 
@@ -124,12 +142,61 @@ li {
 }
 
 .hero-image--home {
-  background-image: url('../images/hero_01.jpg');
+  background-image: url('../images/hero_01_lg.jpg');
   background-position: 75%;
 
   @media #{$media--medium} {
     background-position: 50%;
   }
+
+  @media #{$media--large} {
+    background-position: 0;
+  }
+}
+
+.hero-image--contact {
+  background-image: url('../images/hero_04_lg.jpg');
+  background-position: 60%;
+
+  @media #{$media--medium} {
+    background-position: 50%;
+  }
+
+  @media #{$media--large} {
+    background-position: 0;
+  }
+}
+
+.hero-image--photos {
+  background-image: url('../images/hero_05_lg.jpg');
+  background-position: 50%;
+
+  @media #{$media--large} {
+    background-position: 0;
+  }
+}
+
+.hero-image--events {
+  background-image: url('../images/hero_events_lg.jpg');
+  background-position: 50%;
+
+  @media #{$media--large} {
+    background-position: 0;
+  }
+}
+
+.hero-image--gifts {
+  background-image: url('../images/hero_03_lg.jpg');
+  background-position: 50%;
+
+  @media #{$media--large} {
+    background-position: 0;
+  }
+}
+
+.hero-image--travel {
+  background-image: url('../images/hero_02_lg.jpg');
+  background-position: 50%;
 
   @media #{$media--large} {
     background-position: 0;
@@ -167,9 +234,17 @@ h3 {
 }
 
 h4 {
+  @media #{$media--small} {
+    font-size: 22px;
+    color: #6B839D;
+    font-family: 'League Script', cursive;
+    text-align: center;
+  }
+  @media #{$media--medium} {
   font-size: 28px;
   color: #6B839D;
   font-family: 'League Script', cursive;
+  }
  }
 
  h5 {
@@ -180,10 +255,18 @@ h4 {
  }
 
 .center-copy{
+  @media #{$media--small} {
+    max-width:80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+  @media #{$media--medium} {
   max-width:50%;
   margin: 0 auto;
   padding: 20px 0;
   text-align: center;
+  }
 }
 
 p {
@@ -253,6 +336,19 @@ p {
 }
 
 .button {
+  @media #{$media--small} {
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    border: 2px solid #6B839D;
+    font-size: 12px;
+    color: #6B839D;
+    font-weight: 300;
+    letter-spacing: 4px;
+    padding: 1rem 1rem;
+    transition: all 0.5s;
+  }
+  @media #{$media--medium} {
   background: transparent;
   border: 2px solid #6B839D;
   font-size: 12px;
@@ -261,7 +357,7 @@ p {
   letter-spacing: 4px;
   padding: 1rem 1rem;
   transition: all 0.5s;
-
+  }
   a {
     color: #6B839D;
     text-decoration: none;
@@ -297,4 +393,19 @@ p {
 
 .qanda {
   margin-bottom: 40px;
+}
+
+.hotel {
+  margin-bottom: 100px;
+}
+
+.flex-column--image {
+  text-align: center;
+}
+
+.flex-image {
+  max-width: 100%;
+  @media #{$media--medium} {
+    max-width: initial;
+  }
 }
