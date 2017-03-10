@@ -79,6 +79,9 @@ li {
   @media #{$media--medium} {
     display: none;
   }
+
+  border: 0px !important;
+  background-color: #FFF !important;
 }
 
 .nav-link {
